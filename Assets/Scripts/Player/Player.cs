@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private PlayerMovement _playerMovement;
     private Weapon _currentWeapon;
     private Coroutine _coroutine;
+    private bool _isAlive = true;
     private float _currentHealth;
     private float _targetHealth;
     private float _recoveryRate = 10f;
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     public event UnityAction<float, float> HealthChanged;
 
     public float Money { get; private set; }
+    public bool IsAlive => _isAlive;
 
     private void Start()
     {
@@ -42,7 +44,10 @@ public class Player : MonoBehaviour
         OnChangeHealth();
 
         if (_currentHealth <= 0)
-            Destroy(gameObject);
+        {
+            _isAlive = false;
+            gameObject.SetActive(false);
+        }
     }
 
     public void AddHealth(float health)
@@ -61,12 +66,15 @@ public class Player : MonoBehaviour
 
     private void OnChangeHealth()
     {
-        if (_coroutine != null)
+        if (_isAlive)
         {
-            StopCoroutine(_coroutine);
-        }
+            if (_coroutine != null)
+            {
+                StopCoroutine(_coroutine);
+            }
 
-        _coroutine = StartCoroutine(ChangeHealth());
+            _coroutine = StartCoroutine(ChangeHealth());
+        }
     }
 
     private IEnumerator ChangeHealth()
