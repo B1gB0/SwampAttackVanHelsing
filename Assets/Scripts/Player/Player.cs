@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     public bool IsAlive => _isAlive;
     public bool CrossbowIsBuyed => _crossbowIsBuyed;
     public bool KnifeIsBuyed => _knifeIsBuyed;
+    public Weapon CurrentWeapon => _currentWeapon;
     public List<Weapon> Weapons => _weapons;
 
     private void Start()
@@ -93,6 +94,7 @@ public class Player : MonoBehaviour
     {
         Money -= weapon.Price;
         MoneyChanged?.Invoke(Money);
+        _currentWeapon = weapon;
     }
 
     public void NextWeapon()

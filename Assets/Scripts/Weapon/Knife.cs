@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Knife : Weapon
 {
-    private float _damage = 10f;
+    private float _damage = 20f;
 
     public float Damage => _damage;
 
