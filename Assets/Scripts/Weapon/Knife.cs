@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Knife : Weapon
 {
-    public override void Shoot(Transform shootPoint)
-    {
-        
-    }
+    private float _damage = 10f;
+
+    public float Damage => _damage;
+
+    public override void Shoot(Transform shootPoint) { }
 }

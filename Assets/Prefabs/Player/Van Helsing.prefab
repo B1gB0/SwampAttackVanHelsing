@@ -66,6 +66,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1065854732}
+  - {fileID: 1203040841152561557}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -213,5 +214,78 @@ MonoBehaviour:
   _health: 1000
   _weapons:
   - {fileID: 7713419192262686591, guid: 940f3069e813936428f9563d43a60566, type: 3}
-  - {fileID: 7713419192262686591, guid: 940f3069e813936428f9563d43a60566, type: 3}
+  - {fileID: 5844397367272108412, guid: d9fbe791e5924ca48b8c178080440b9f, type: 3}
   _shootPoint: {fileID: 1065854732}
+  _hitBox: {fileID: 5210701940199912388}
+--- !u!1 &5210701940199912388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203040841152561557}
+  - component: {fileID: 842666832866234928}
+  - component: {fileID: 6503480401197930439}
+  m_Layer: 7
+  m_Name: HitBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1203040841152561557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210701940199912388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.36, y: 0.69, z: 0}
+  m_LocalScale: {x: 1.3005, y: 1.8369564, z: 1.3005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 564595513610731485}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &842666832866234928
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210701940199912388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.66553634, y: -0.1654135}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6513797, y: 0.8897245}
+  m_EdgeRadius: 0
+--- !u!114 &6503480401197930439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5210701940199912388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03437b2ca8b8b2846a801a2c2f056f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _knife: {fileID: 5844397367272108412, guid: d9fbe791e5924ca48b8c178080440b9f, type: 3}

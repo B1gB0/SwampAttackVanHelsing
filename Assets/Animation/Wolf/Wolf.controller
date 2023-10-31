@@ -43,7 +43,7 @@ AnimatorStateMachine:
     m_Position: {x: 40, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 330615716016960639}
-    m_Position: {x: 75, y: 355, z: 0}
+    m_Position: {x: 80, y: 350, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 424236364858681948}
     m_Position: {x: 110, y: 420, z: 0}
@@ -112,7 +112,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Celebration
+  m_Name: Celebrate
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
